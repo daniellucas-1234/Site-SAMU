@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Minha Viagem dos Sonhos – Japão</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-image: url("https://images.unsplash.com/photo-1549693578-d683be217e58");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.overlay {
+    background-color: rgba(255,255,255,0.9);
+    min-height: 100vh;
+    padding: 50px 0;
+}
+
+.container {
+    width: 75%;
+    margin: auto;
+    background: white;
+    padding: 45px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+}
+
+h1 {
+    text-align: center;
+    font-weight: 500;
+}
+
+p {
+    line-height: 1.9;
+    text-align: justify;
+    font-size: 1.05em;
+}
+
+/* ABAS */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #eaeaea;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.2s;
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #0066cc, #0099ff);
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    margin-top: 35px;
+    background: #f7f7f7;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* BOTÕES */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 45px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #0066cc, #0099ff);
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+<div class="container">
+
+<h1>Japão — Minha Viagem dos Sonhos 🇯🇵</h1>
+
+<p>
+O Japão é um destino que combina tradição, tecnologia e respeito cultural.
+Cada cidade oferece uma experiência diferente, tornando a viagem rica,
+organizada e inesquecível.
+</p>
+
+<!-- ABAS -->
+<div class="tabs">
+    <button class="tab-btn active" onclick="openTab(0)">🌆 Locais Populares</button>
+    <button class="tab-btn" onclick="openTab(1)">✈️ Passagens</button>
+    <button class="tab-btn" onclick="openTab(2)">🚆 Transporte</button>
+    <button class="tab-btn" onclick="openTab(3)">🍜 Alimentação</button>
+    <button class="tab-btn" onclick="openTab(4)">🏨 Hospedagem</button>
+</div>
+
+<!-- CONTEÚDO DAS ABAS -->
+<div class="tab-content active">
+    <p>
+    Tóquio se destaca por bairros como Shibuya e Akihabara, enquanto Kyoto
+    preserva templos históricos e tradições milenares. O Monte Fuji é um dos
+    símbolos mais famosos do país, e cidades como Osaka e Nara completam a
+    experiência com gastronomia e natureza.
+    </p>
+</div>
+
+<div class="tab-content">
+    <p>
+    As passagens aéreas para o Japão podem ser pesquisadas com segurança no
+    Google Flights, que compara preços entre companhias aéreas e permite
+    acompanhar variações de valores ao longo do tempo.
+    </p>
+</div>
+
+<div class="tab-content">
+    <p>
+    O transporte japonês é extremamente eficiente. Trens, metrôs e o famoso
+    Shinkansen conectam cidades com rapidez, conforto e pontualidade. Para
+    turistas, passes de transporte facilitam a locomoção.
+    </p>
+</div>
+
+<div class="tab-content">
+    <p>
+    A culinária japonesa vai muito além do sushi. Pratos como ramen, tempurá,
+    takoyaki e okonomiyaki fazem parte do cotidiano e são encontrados tanto em
+    restaurantes simples quanto em locais tradicionais.
+    </p>
+</div>
+
+<div class="tab-content">
+    <p>
+    A hospedagem no Japão varia entre hotéis modernos, hostels, cápsulas e
+    ryokans tradicionais. Cada opção oferece conforto e uma experiência
+    cultural única.
+    </p>
+</div>
+
+<!-- BOTÕES -->
+<div class="buttons">
+    <a class="btn" href="https://www.japan.travel/pt/br/" target="_blank">
+        🌐 Turismo Oficial do Japão
+    </a>
+
+    <a class="btn" href="https://www.google.com/flights" target="_blank">
+        ✈️ Buscar Passagens
+    </a>
+
+    <a class="btn" href="dicas.html">
+        ✨ Dicas de Viagem
+    </a>
+</div>
+
+<footer>
+Projeto educativo • Viagem dos Sonhos
+</footer>
+
+</div>
+</div>
+
+<script>
+function openTab(index) {
+    const tabs = document.querySelectorAll(".tab-content");
+    const buttons = document.querySelectorAll(".tab-btn");
+
+    tabs.forEach(tab => tab.classList.remove("active"));
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    tabs[index].classList.add("active");
+    buttons[index].classList.add("active");
+}
+</script>
+
+</body>
+</html>
